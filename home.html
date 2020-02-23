@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>데일리 지수 체크</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <script>    
+        function listing() {
+        $.ajax({
+            type: "GET",
+            url: "/index",
+            data: {},
+            success: function(response){
+                console.log(response)
+            }
+        })
+        }
+
+    </script>
+</head>
+<body>
+    <h1>데일리지수체크</h1>
+    <input type="button" value="지수보기" onclick="listing()"> 
+    <p>※실시간 데이터는 아니고 하루에 한번씩 장 마감후 업데이트 됩니다. </p>
+</body>
+</html>
